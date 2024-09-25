@@ -16,7 +16,8 @@ openai_api_key = st.text_input("Enter your OpenAI API Key", type="password")
 error_container = st.empty()
 
 # Check if API key is provided before proceeding
-# we are going to create 2 agents with different roles, a researcher and a reader
+# we are going to create 2 agents with different roles, a story researcher and a user researcher
+# the hn_assistant will make a team of both agents for them to work together.
 if openai_api_key:
     try:
         # Create a HackerNews story researcher agent
